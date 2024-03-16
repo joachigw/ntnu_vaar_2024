@@ -1,0 +1,142 @@
+2024-02-22T00:21:16.423+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-7] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='1', secondNumber='2', operator='+'}
+2024-02-22T00:21:16.450+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-7] i.o.controller.CalculatorController      : done calculating!
+2024-02-22T00:21:16.452+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-7] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 3.0}
+2024-02-22T00:21:18.064+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-9] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='1', secondNumber='2', operator='+'}
+2024-02-22T00:21:18.078+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-9] i.o.controller.CalculatorController      : done calculating!
+2024-02-22T00:21:18.078+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-9] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 3.0}
+2024-02-22T00:21:18.693+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-10] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='1', secondNumber='2', operator='+'}
+2024-02-22T00:21:18.693+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-10] i.o.controller.CalculatorController      : done calculating!
+2024-02-22T00:21:18.693+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-10] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 3.0}
+2024-02-22T00:21:22.688+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='1', secondNumber='2', operator='+'}
+2024-02-22T00:21:22.688+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : done calculating!
+2024-02-22T00:21:22.688+01:00  INFO 20696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 3.0}
+2024-02-22T10:09:31.092+01:00  INFO 15980 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Starting CalculatorOving4Application using Java 21.0.2 with PID 15980 (C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4\target\classes started by joach in C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4)
+2024-02-22T10:09:31.094+01:00  INFO 15980 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T10:09:31.133+01:00  INFO 15980 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-22T10:09:31.133+01:00  INFO 15980 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-22T10:09:32.132+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-22T10:09:32.145+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-22T10:09:32.146+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-22T10:09:32.192+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-22T10:09:32.193+01:00  INFO 15980 --- [CalculatorController] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1059 ms
+2024-02-22T10:09:32.644+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-22T10:09:32.673+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-22T10:09:32.680+01:00  INFO 15980 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Started CalculatorOving4Application in 1.982 seconds (process running for 2.716)
+2024-02-22T10:09:41.457+01:00  INFO 15980 --- [CalculatorController] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-22T10:09:41.457+01:00  INFO 15980 --- [CalculatorController] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-22T10:09:41.458+01:00  INFO 15980 --- [CalculatorController] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-22T10:09:41.532+01:00  INFO 15980 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='6', secondNumber='6', operator='x'}
+2024-02-22T10:09:41.533+01:00  INFO 15980 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : done calculating!
+2024-02-22T10:09:41.533+01:00  INFO 15980 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 36.0}
+2024-02-22T10:21:34.030+01:00  INFO 15980 --- [CalculatorController] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-02-22T10:21:34.089+01:00  INFO 15980 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Starting CalculatorOving4Application using Java 21.0.2 with PID 15980 (C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4\target\classes started by joach in C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4)
+2024-02-22T10:21:34.090+01:00  INFO 15980 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T10:21:34.231+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-22T10:21:34.232+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-22T10:21:34.232+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-22T10:21:34.243+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-22T10:21:34.244+01:00  INFO 15980 --- [CalculatorController] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 152 ms
+2024-02-22T10:21:34.299+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-22T10:21:34.305+01:00  INFO 15980 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-22T10:21:34.307+01:00  INFO 15980 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Started CalculatorOving4Application in 0.238 seconds (process running for 724.343)
+2024-02-22T10:21:34.309+01:00  INFO 15980 --- [CalculatorController] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-02-22T10:22:28.077+01:00  INFO 3696 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Starting CalculatorOving4Application using Java 21.0.2 with PID 3696 (C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4\target\classes started by joach in C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4)
+2024-02-22T10:22:28.078+01:00  INFO 3696 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T10:22:28.115+01:00  INFO 3696 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-22T10:22:28.115+01:00  INFO 3696 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-22T10:22:28.764+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-22T10:22:28.773+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-22T10:22:28.774+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-22T10:22:28.800+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-22T10:22:28.801+01:00  INFO 3696 --- [CalculatorController] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 685 ms
+2024-02-22T10:22:29.047+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-22T10:22:29.067+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-22T10:22:29.072+01:00  INFO 3696 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Started CalculatorOving4Application in 1.303 seconds (process running for 1.779)
+2024-02-22T10:23:13.604+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-22T10:23:13.605+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-22T10:23:13.605+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-02-22T10:23:13.662+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='6', secondNumber='0', operator='/'}
+2024-02-22T10:23:13.663+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:24:01.825+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:24:01.825+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:25:21.225+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-3] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:25:21.226+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-3] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:25:36.039+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-4] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:25:36.040+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-4] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:25:52.217+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-5] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='1.5', secondNumber='0', operator='/'}
+2024-02-22T10:25:52.217+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-5] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:28:13.140+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-6] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:28:13.140+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-6] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:28:57.980+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-7] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:28:57.980+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-7] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:29:54.044+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-8] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='8', secondNumber='0', operator='/'}
+2024-02-22T10:29:54.046+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-8] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:30:44.042+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-9] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:30:44.042+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-9] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:30:50.407+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-10] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='6', secondNumber='0', operator='/'}
+2024-02-22T10:30:50.408+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-10] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:31:00.642+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='0', secondNumber='0', operator='x'}
+2024-02-22T10:31:00.642+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 0.0}
+2024-02-22T10:31:11.060+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='0', secondNumber='9', operator='x'}
+2024-02-22T10:31:11.060+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-2] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 0.0}
+2024-02-22T10:31:13.361+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-3] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='0', secondNumber='9', operator='x'}
+2024-02-22T10:31:13.362+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-3] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 0.0}
+2024-02-22T10:31:15.323+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-4] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='0', secondNumber='6', operator='/'}
+2024-02-22T10:31:15.323+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-4] i.o.controller.CalculatorController      : Sending the following result as response: {'result': 0.0}
+2024-02-22T10:31:19.936+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-5] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='0', secondNumber='0', operator='/'}
+2024-02-22T10:31:19.937+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-5] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:32:43.455+01:00  INFO 3696 --- [CalculatorController] [http-nio-8080-exec-6] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='9', secondNumber='0', operator='/'}
+2024-02-22T10:32:43.455+01:00 ERROR 3696 --- [CalculatorController] [http-nio-8080-exec-6] i.o.controller.CalculatorController      : There was an error with the calculation of the expression.
+Error: Division by zero is not allowed.
+2024-02-22T10:35:03.945+01:00  INFO 3696 --- [CalculatorController] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-02-22T10:35:04.015+01:00  INFO 3696 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Starting CalculatorOving4Application using Java 21.0.2 with PID 3696 (C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4\target\classes started by joach in C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4)
+2024-02-22T10:35:04.016+01:00  INFO 3696 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T10:35:04.154+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-22T10:35:04.155+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-22T10:35:04.156+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-22T10:35:04.167+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-22T10:35:04.167+01:00  INFO 3696 --- [CalculatorController] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 149 ms
+2024-02-22T10:35:04.252+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-22T10:35:04.260+01:00  INFO 3696 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-22T10:35:04.262+01:00  INFO 3696 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Started CalculatorOving4Application in 0.273 seconds (process running for 756.97)
+2024-02-22T10:35:04.264+01:00  INFO 3696 --- [CalculatorController] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-02-22T10:35:46.551+01:00  INFO 11892 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Starting CalculatorOving4Application using Java 21.0.2 with PID 11892 (C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4\target\classes started by joach in C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4)
+2024-02-22T10:35:46.552+01:00  INFO 11892 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T10:35:46.587+01:00  INFO 11892 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-22T10:35:46.587+01:00  INFO 11892 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-22T10:35:47.192+01:00  INFO 11892 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-22T10:35:47.200+01:00  INFO 11892 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-22T10:35:47.200+01:00  INFO 11892 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-22T10:35:47.226+01:00  INFO 11892 --- [CalculatorController] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-22T10:35:47.226+01:00  INFO 11892 --- [CalculatorController] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
+2024-02-22T10:35:47.476+01:00  INFO 11892 --- [CalculatorController] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-22T10:35:47.499+01:00  INFO 11892 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-22T10:35:47.504+01:00  INFO 11892 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Started CalculatorOving4Application in 1.257 seconds (process running for 1.757)
+2024-02-22T10:35:55.746+01:00  INFO 11892 --- [CalculatorController] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-22T10:35:55.747+01:00  INFO 11892 --- [CalculatorController] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-22T10:35:55.747+01:00  INFO 11892 --- [CalculatorController] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-02-22T10:35:55.805+01:00  INFO 11892 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : Calculating the following expression: Expression{firstNumber='6', secondNumber='0', operator='/'}
+2024-02-22T10:35:55.806+01:00 ERROR 11892 --- [CalculatorController] [http-nio-8080-exec-1] i.o.controller.CalculatorController      : There was an error with the calculation of the expression. Error: Division by zero is not allowed.
+2024-02-22T12:07:51.799+01:00  INFO 176 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Starting CalculatorOving4Application using Java 21.0.2 with PID 176 (C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4\target\classes started by joach in C:\Users\joach\OneDrive - NTNU\main\_NTNU\Dataingeniør\V2024\FullStack\Ovinger\Oving_4\calculator_oving4)
+2024-02-22T12:07:51.801+01:00  INFO 176 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T12:07:51.841+01:00  INFO 176 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-22T12:07:51.842+01:00  INFO 176 --- [CalculatorController] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-22T12:07:52.495+01:00  INFO 176 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-22T12:07:52.505+01:00  INFO 176 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-22T12:07:52.505+01:00  INFO 176 --- [CalculatorController] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-22T12:07:52.537+01:00  INFO 176 --- [CalculatorController] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-22T12:07:52.538+01:00  INFO 176 --- [CalculatorController] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 696 ms
+2024-02-22T12:07:52.775+01:00  INFO 176 --- [CalculatorController] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-22T12:07:52.800+01:00  INFO 176 --- [CalculatorController] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-22T12:07:52.807+01:00  INFO 176 --- [CalculatorController] [restartedMain] i.oving4.CalculatorOving4Application     : Started CalculatorOving4Application in 1.349 seconds (process running for 1.974)

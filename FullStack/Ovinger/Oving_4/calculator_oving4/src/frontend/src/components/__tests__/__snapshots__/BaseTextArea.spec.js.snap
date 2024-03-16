@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Base text area > renders html correctly 1`] = `
+"<!--v-if-->
+<textarea data-v-34a105de="" placeholder=""></textarea>"
+`;

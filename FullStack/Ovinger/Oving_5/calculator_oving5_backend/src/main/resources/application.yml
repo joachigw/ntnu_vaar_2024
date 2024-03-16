@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: servlet
+
+  datasource:
+    url: jdbc:postgresql://localhost:5332/app_user
+    username: oving5
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true

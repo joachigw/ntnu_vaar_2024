@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TLSExample:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/TLSExample_jar2</output-path>
+    <root id="archive" name="JavaSSLClient.jar">
+      <element id="module-output" name="TLSExample" />
+    </root>
+  </artifact>
+</component>

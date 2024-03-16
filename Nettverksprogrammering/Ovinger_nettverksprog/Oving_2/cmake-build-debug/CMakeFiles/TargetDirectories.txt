@@ -1,0 +1,3 @@
+C:/Users/joach/OneDrive - NTNU/main/!NTNU/Dataingeniør/V2024/Nettverksprogrammering/Ovinger_nettverksprog/Oving_2/cmake-build-debug/CMakeFiles/Oving_2.dir
+C:/Users/joach/OneDrive - NTNU/main/!NTNU/Dataingeniør/V2024/Nettverksprogrammering/Ovinger_nettverksprog/Oving_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/joach/OneDrive - NTNU/main/!NTNU/Dataingeniør/V2024/Nettverksprogrammering/Ovinger_nettverksprog/Oving_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

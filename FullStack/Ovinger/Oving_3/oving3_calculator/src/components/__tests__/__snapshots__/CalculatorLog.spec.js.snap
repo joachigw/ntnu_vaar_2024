@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Calculator log > renders html correctly 1`] = `
+"<div class="log-wrapper">
+  <div class="log-header">
+    <div class="title-container">
+      <h1 class="title">Log</h1>
+    </div>
+    <div id="clear-log-btn">Clear log</div>
+  </div>
+  <hr>
+  <ul id="log-list"></ul>
+</div>"
+`;

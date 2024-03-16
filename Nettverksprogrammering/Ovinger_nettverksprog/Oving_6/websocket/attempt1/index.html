@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket</title>
+</head>
+<body>
+    <h1>Chat with everyone in real-time through WebSocket!</h1>
+    <label for="client-message">Enter message here:</label>
+    <input id="client-message" type="text" placeholder="Your message...">
+    <button onclick="sendMsg()">Send</button>
+    <br><br>
+    <hr><br>
+    <label>Broadcast messages from other clients:</label>
+    <ul id="msg-list"></ul>
+    <script>
+        // Creates a random client ID between 1 and 10 000
+        const clientId = Math.floor(Math.random() * 10000 + 1);
+
+        const clientMsg = document.getElementById("client-message");
+        const msgList = document.getElementById("msg-list");
+        const ws = new WebSocket("ws://" + location.hostname +":3001");
+
+        // Adds <li> element to <ul> list
+        ws.onmessage = event => {
+            let data = JSON.parse(event.data);
+            let msg = document.createElement("li");
+
+            msg.appendChild(document.createTextNode(`Client ${data.id} says: ${data.text}`));
+            msgList.append(msg);
+            console.log("Data from server: " + data.text);
+        }
+
+        ws.onerror = error => {
+            console.error(error);
+        }
+
+        // Send the input field value to WebSocket server
+        function sendMsg() {
+            if (clientMsg.value.trim().length === 0) {
+                alert("You cannot send an empty message!");
+                clientMsg.value = "";
+                return;
+            }
+
+            // Creates JSON obj with client ID and client message/text
+            ws.send(JSON.stringify({
+                id: clientId,
+                text: clientMsg.value
+            }));
+            clientMsg.value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+mars 14, 2024 10:05:04 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:05:12 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:05:12 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:05:12 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 9
+mars 14, 2024 10:05:12 P.M. util.MethodTimer close
+INFO: db.TransactionDao:addTransaction: 25
+mars 14, 2024 10:05:12 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:05:15 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:05:15 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:05:15 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 11
+mars 14, 2024 10:05:16 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 11
+mars 14, 2024 10:05:16 P.M. util.MethodTimer close
+INFO: db.TransactionDao:deleteTransactions: 17
+mars 14, 2024 10:05:16 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:05:16 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:05:42 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:05:42 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:05:42 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:05:42 P.M. util.MethodTimer close
+INFO: db.TransactionDao:addTransaction: 10
+mars 14, 2024 10:05:42 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:05:50 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:05:53 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:06:21 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:06:21 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:06:21 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 9
+mars 14, 2024 10:06:33 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:07:06 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 11
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.TransactionDao:addTransaction: 12
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:07:28 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 9
+mars 14, 2024 10:07:48 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:07:48 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:07:52 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:07:54 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:07:54 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:07:54 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:07:57 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:07:57 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:07:57 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 7
+mars 14, 2024 10:08:02 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:08:04 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:08:09 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:08:09 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:08:09 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 9
+mars 14, 2024 10:08:14 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:08:14 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:08:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:08:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:08:17 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:08:25 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:08:59 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 10
+mars 14, 2024 10:08:59 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 13
+mars 14, 2024 10:08:59 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:08:59 P.M. util.MethodTimer close
+INFO: db.TransactionDao:addTransaction: 12
+mars 14, 2024 10:09:00 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:09:00 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:09:00 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:10:30 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:10:35 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:10:44 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:10:44 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 4
+mars 14, 2024 10:10:46 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:10:47 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:10:47 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 4
+mars 14, 2024 10:10:47 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 7
+mars 14, 2024 10:10:54 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:11:00 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:11:00 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:11:02 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:07 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:07 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:07 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 9
+mars 14, 2024 10:11:16 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:11:32 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:32 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:34 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:34 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:11:34 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 10
+mars 14, 2024 10:11:36 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:11:36 P.M. util.MethodTimer close
+INFO: db.TransactionDao:deleteTransactions: 9
+mars 14, 2024 10:11:36 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 4
+mars 14, 2024 10:11:36 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 6
+mars 14, 2024 10:11:39 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 9
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.TransactionDao:addTransaction: 9
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:11:47 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 7
+mars 14, 2024 10:11:58 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:11:58 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:12:01 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:12:01 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:12:01 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:12:02 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:12:02 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:12:02 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 7
+mars 14, 2024 10:12:13 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:12:13 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:12:30 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:12:30 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:12:32 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:12:32 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:12:32 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 9
+mars 14, 2024 10:12:36 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:12:36 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:12:36 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 7
+mars 14, 2024 10:12:40 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:13:02 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:13:02 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:13:03 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 8
+mars 14, 2024 10:13:03 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:13:03 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:13:44 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:13:44 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:14:07 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:14:07 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:14:08 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:14:08 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:14:08 P.M. util.MethodTimer close
+INFO: db.TransactionDao:getTransactions: 8
+mars 14, 2024 10:14:15 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:15:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:15:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:15:26 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 4
+mars 14, 2024 10:15:26 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:15:39 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 7
+mars 14, 2024 10:15:39 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:16:10 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 4
+mars 14, 2024 10:16:10 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:16:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:16:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:17:04 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 5
+mars 14, 2024 10:17:04 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:17:12 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 9
+mars 14, 2024 10:17:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6
+mars 14, 2024 10:17:17 P.M. util.MethodTimer close
+INFO: db.Db:getConnection: 6

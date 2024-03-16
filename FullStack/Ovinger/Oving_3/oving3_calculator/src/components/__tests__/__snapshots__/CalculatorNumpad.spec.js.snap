@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Calculator numpad > renders html correctly 1`] = `
+"<div class="numpad">
+  <div class="btn">AC</div>
+  <div class="btn">ANS</div>
+  <div class="btn">DEL</div>
+  <div class="btn non-number-button">+</div>
+  <div class="btn">1</div>
+  <div class="btn">2</div>
+  <div class="btn">3</div>
+  <div class="btn non-number-button">-</div>
+  <div class="btn">4</div>
+  <div class="btn">5</div>
+  <div class="btn">6</div>
+  <div class="btn non-number-button">x</div>
+  <div class="btn">7</div>
+  <div class="btn">8</div>
+  <div class="btn">9</div>
+  <div class="btn non-number-button">/</div>
+  <div class="btn zero-button">0</div>
+  <div class="btn comma-button non-number-button">.</div>
+  <div class="btn equals-button non-number-button">=</div>
+</div>"
+`;

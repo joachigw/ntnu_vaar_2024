@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Base input field > renders html correctly 1`] = `
+"<!--v-if-->
+<input data-v-82c69faf="" placeholder="">"
+`;
