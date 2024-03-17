@@ -2,8 +2,6 @@ package idatt2105.oving5.services;
 import idatt2105.oving5.model.AppUser;
 import idatt2105.oving5.repository.AppUserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
@@ -25,8 +23,12 @@ public class AppUserService {
         appUserRepository.save(appUser);
     }
 
-    public Boolean verifyUser(AppUser appUser) {
+    public Boolean verifyAppUser(AppUser appUser) {
         return appUserRepository.findByUsername(appUser.getUsername()) != null &&
                 appUserRepository.findByPassword(appUser.getPassword()) != null;
+    }
+
+    public AppUser findAppUserByUsername(String username) {
+        return appUserRepository.findByUsername(username);
     }
 }
