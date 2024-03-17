@@ -32,4 +32,10 @@ public class AppUserController {
         appUserService.addAppUser(appUser);
         return true;
     }
+
+    @GetMapping("/login")
+    public Boolean loginUser(@RequestBody AppUser appUser) {
+        logger.info("Verifying user...");
+        return appUserService.verifyUser(appUser);
+    }
 }

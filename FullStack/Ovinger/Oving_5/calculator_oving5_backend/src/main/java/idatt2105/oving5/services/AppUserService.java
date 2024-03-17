@@ -24,4 +24,9 @@ public class AppUserService {
     public void addAppUser(@RequestBody AppUser appUser) {
         appUserRepository.save(appUser);
     }
+
+    public Boolean verifyUser(AppUser appUser) {
+        return appUserRepository.findByUsername(appUser.getUsername()) != null &&
+                appUserRepository.findByPassword(appUser.getPassword()) != null;
+    }
 }
