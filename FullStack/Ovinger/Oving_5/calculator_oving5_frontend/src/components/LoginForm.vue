@@ -14,9 +14,11 @@
             class="field"
             type="password"
         />
+
+        <button id="submit-btn" type="submit" :disabled="hasErrors">Log in</button>
     </form>
-    <h3>Forgot password</h3>
-    <h3>Register new user</h3>
+<!--    <h3>Forgot password</h3>-->
+<!--    <h3>Register new user</h3>-->
 </template>
 
 <script setup>
@@ -42,10 +44,7 @@ const rules = computed(() => {
         },
         email: {
             required: helpers.withMessage("This field is required.", required),
-            email: helpers.withMessage(
-                    "Please enter a valid email address.",
-                    email
-            ),
+            email: helpers.withMessage("Please enter a valid email address.", email),
         },
         message: {
             required: helpers.withMessage("This field is required.", required),
@@ -101,5 +100,22 @@ function resetInputFields() {
 
 :deep(label) {
     margin: 10px 0 10px 0;
+}
+
+#submit-btn {
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#submit-btn:hover {
+    background-color: #007700;
+}
+
+#submit-btn:disabled {
+    background-color: gray;
 }
 </style>

@@ -10,30 +10,28 @@ const userApiClient = axios.create({
 });
 
 export default {
-    async postExpression(expression) {
+    async postUser(user) {
         try {
             const response = await userApiClient.post(
-                    "/api/calculator/login",
-                    expression
+                    "/api/appusers/",
+                    user
             );
 
             if (response.status === 200) {
                 const data = response.data;
 
-                if (data && typeof data.result !== "undefined") {
-                    const result = data.result;
-                    return { success: true, result };
+                if (data && typeof data !== "undefined") {
+                    return { success: true, data };
                 } else {
                     return {
                         success: false,
-                        message:
-                                "Invalid response format or missing result property.",
+                        message: "Invalid response format or missing result property.",
                     };
                 }
             } else {
                 return {
                     success: false,
-                    message: "Failed to pass expression to backend.",
+                    message: "Failed to pass user to backend.",
                 };
             }
         } catch (error) {

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import CalculatorView from "@/views/CalculatorView.vue";
 import FormView from "@/views/FormView.vue";
 import LoginView from "@/views/LoginView.vue";
+import RegisterForm from "@/components/RegisterForm.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -18,5 +19,9 @@ export default createRouter({
             path: "/login",
             component: LoginView,
         },
+        {
+            path: "/register",
+            component: RegisterForm,
+        }
     ],
 });

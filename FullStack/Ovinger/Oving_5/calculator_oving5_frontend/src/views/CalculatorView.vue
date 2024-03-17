@@ -169,8 +169,8 @@ async function sum() {
         operator: operator,
     };
 
-    const test = await calculatorApiClient.postExpression(expression);
-    result = test.result;
+    const expressionPost = await calculatorApiClient.postExpression(expression);
+    result = expressionPost.result;
     displayValue.value = String(result);
 
     sumPressed = true;

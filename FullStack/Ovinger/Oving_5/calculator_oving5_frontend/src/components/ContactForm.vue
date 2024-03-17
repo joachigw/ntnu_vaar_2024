@@ -40,13 +40,10 @@
         >
             {{ error.$message }}
         </span>
-        <button id="submit-btn" type="submit" :disabled="hasErrors">
-            SUBMIT
-        </button>
+        <button id="submit-btn" type="submit" :disabled="hasErrors">SUBMIT</button>
     </form>
-    <span id="response-message" v-if="responseMessage">{{
-        responseMessage
-    }}</span>
+
+    <span id="response-message" v-if="responseMessage">{{ responseMessage }}</span>
 </template>
 
 <script setup>
