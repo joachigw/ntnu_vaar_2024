@@ -24,6 +24,10 @@ public class ExpressionService {
         return expressionRepository.findAll();
     }
 
+    public List<Expression> findAllExpressionsByAppUserId(Integer appUserId) {
+        return expressionRepository.findByAppUserId(appUserId);
+    }
+
     public void addExpression(@RequestBody Expression expression) {
         expressionRepository.save(expression);
     }
