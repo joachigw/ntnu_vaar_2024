@@ -33,9 +33,9 @@ public class AppUserController {
         return true;
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public Boolean loginUser(@RequestBody AppUser appUser) {
-        logger.info("Verifying user...");
-        return appUserService.verifyUser(appUser);
+        logger.info("Verifying user: " + appUser);
+        return appUserService.verifyAppUser(appUser);
     }
 }
