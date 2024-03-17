@@ -1,42 +1,28 @@
 package idatt2105.oving5.controller;
 
-import idatt2105.oving5.repository.AppUserRepository;
 import idatt2105.oving5.model.AppUser;
-import idatt2105.oving5.dto.AppUserDTO;
 import idatt2105.oving5.services.AppUserService;
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/appuser")
-@CrossOrigin(origins = "http://localhost:5173")
+@RequestMapping("/api/appusers")
 public class AppUserController {
 
-    private AppUserRepository appUserRepository;
+    private final AppUserService appUserService;
 
-    public AppUserController(AppUserRepository appUserRepository) {
-        this.appUserRepository = appUserRepository;
+    public AppUserController(AppUserService appUserService) {
+        this.appUserService = appUserService;
     }
 
-    @PostMapping("/login")
-    public AppUserDTO loginUser(@RequestBody AppUser appUser) {
-        Logger logger = LoggerFactory.getLogger(AppUserController.class);
-        AppUserService appUserService = new AppUserService();
-
-        // Verify username and password with database
-        try {
-            logger.info("Attempting to log in the following user: " + appUser.toString() + "...");
-            return appUserService.verify(appUser);
-        } catch (Exception e) {
-            logger.error("Unexpected error occurred. Error: " + e.getMessage());
-            return null;
-        }
-    }
-
-    @GetMapping("/appusers")
+    @GetMapping("/")
     public List<AppUser> getAppUsers() {
-        return appUserRepository.findAll();
+        return appUserService.findAllAppUsers();
+    }
+
+    @PostMapping("/")
+    public void addAppUser(@RequestBody AppUser appUser) {
+        appUserService.addAppUser(appUser);
     }
 }

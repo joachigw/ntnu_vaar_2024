@@ -1,8 +1,10 @@
 package idatt2105.oving5.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="app_user")
@@ -22,8 +24,9 @@ public class AppUser {
     private String username;
     private String password;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "appUser")
-    private List<Expression> expressionList;
+    private Set<Expression> expressions = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -49,12 +52,12 @@ public class AppUser {
         this.password = password;
     }
 
-    public List<Expression> getExpressionList() {
-        return expressionList;
+    public Set<Expression> getExpressions() {
+        return expressions;
     }
 
-    public void setExpressionList(List<Expression> expressionList) {
-        this.expressionList = expressionList;
+    public void setExpressions(Set<Expression> expressions) {
+        this.expressions = expressions;
     }
 
     @Override

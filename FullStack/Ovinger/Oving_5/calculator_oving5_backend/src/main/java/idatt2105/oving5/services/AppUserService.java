@@ -1,20 +1,27 @@
 package idatt2105.oving5.services;
-import idatt2105.oving5.dto.AppUserDTO;
 import idatt2105.oving5.model.AppUser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import idatt2105.oving5.repository.AppUserRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 @Service
 public class AppUserService {
-    private final Logger logger = LoggerFactory.getLogger(AppUserService.class);
 
-    public AppUserDTO verify(AppUser appUser) {
-        AppUserDTO appUserDTO = null;
+    private final AppUserRepository appUserRepository;
 
-        //TODO: Verify user through database (maybe use DAO somewhere?)
-
-        return appUserDTO;
+    public AppUserService(AppUserRepository appUserRepository) {
+        this.appUserRepository = appUserRepository;
     }
 
+    public List<AppUser> findAllAppUsers() {
+        return appUserRepository.findAll();
+    }
+
+    public void addAppUser(@RequestBody AppUser appUser) {
+        appUserRepository.save(appUser);
+    }
 }

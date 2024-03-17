@@ -22,9 +22,10 @@ public class Expression {
     private String secondNumber;
     private String operator;
 
-    @ManyToOne
-    @JoinColumn(name="appuser_id")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "appuser_id", referencedColumnName = "id")
     private AppUser appUser;
+
 
     public Integer getId() {
         return id;
@@ -62,16 +63,18 @@ public class Expression {
         return appUser;
     }
 
-    public void setAppUser(AppUser appUser) {
+    public void assignAppUser(AppUser appUser) {
         this.appUser = appUser;
     }
 
     @Override
     public String toString() {
         return "Expression{" +
-                "firstNumber='" + firstNumber + '\'' +
+                "id=" + id +
+                ", firstNumber='" + firstNumber + '\'' +
                 ", secondNumber='" + secondNumber + '\'' +
                 ", operator='" + operator + '\'' +
+                ", appUser=" + appUser +
                 '}';
     }
 }

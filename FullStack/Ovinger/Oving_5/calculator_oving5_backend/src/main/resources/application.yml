@@ -6,7 +6,7 @@ spring:
     web-application-type: servlet
 
   datasource:
-    url: jdbc:postgresql://localhost:5332/app_user
+    url: jdbc:postgresql://localhost:5332/oving5
     username: oving5
     password: password
 
