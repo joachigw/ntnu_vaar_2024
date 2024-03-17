@@ -2,6 +2,7 @@ package idatt2105.oving5.controller;
 
 import idatt2105.oving5.model.Expression;
 import idatt2105.oving5.model.Calculator;
+import idatt2105.oving5.services.ExpressionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,13 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:5173")
 public class CalculatorController {
 
+    private ExpressionService expressionService;
+
+    public CalculatorController(ExpressionService expressionService) {
+        this.expressionService = expressionService;
+    }
+
+
     @PostMapping("/calculate")
     public ResponseEntity<?> calculateExpression(@RequestBody Expression expression) {
 
@@ -26,6 +34,9 @@ public class CalculatorController {
             logger.info("Calculating the following expression: " + expression.toString());
 
             double result = calculator.calculate(expression);
+            logger.info("Saving expression to database...");
+            expressionService.addExpression(expression);
+            logger.info("Saved!");
 
             logger.info("Sending the following result as response: {'result': " + result + "}");
 
