@@ -18,13 +18,18 @@ public class Expression {
     )
     private Integer id;
 
+    @Column(nullable = false)
     private String firstNumber;
+
+    @Column(nullable = false)
     private String secondNumber;
+
+    @Column(nullable = false)
     private String operator;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "appuser_id", referencedColumnName = "id")
-    private AppUser appUser;
+    @JoinColumn(name = "app_user_id", referencedColumnName = "app_user_id")
+    private User appUser;
 
 
     public Integer getId() {
@@ -59,11 +64,11 @@ public class Expression {
         this.operator = operator;
     }
 
-    public AppUser getAppUser() {
+    public User getAppUser() {
         return appUser;
     }
 
-    public void assignAppUser(AppUser appUser) {
+    public void assignAppUser(User appUser) {
         this.appUser = appUser;
     }
 
