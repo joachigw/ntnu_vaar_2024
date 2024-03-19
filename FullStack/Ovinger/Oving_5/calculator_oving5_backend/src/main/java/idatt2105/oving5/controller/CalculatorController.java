@@ -17,7 +17,7 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:5173")
 public class CalculatorController {
 
-    private ExpressionService expressionService;
+    private final ExpressionService expressionService;
 
     public CalculatorController(ExpressionService expressionService) {
         this.expressionService = expressionService;
