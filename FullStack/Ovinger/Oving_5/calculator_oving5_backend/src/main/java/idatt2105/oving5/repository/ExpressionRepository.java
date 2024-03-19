@@ -7,8 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ExpressionRepository
-        extends JpaRepository<Expression, Integer> {
-
+public interface ExpressionRepository extends JpaRepository<Expression, Integer> {
     List<Expression> findByAppUserId(Integer appUserId);
 }
