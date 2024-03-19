@@ -1,8 +1,8 @@
 package idatt2105.oving5.services;
 
-import idatt2105.oving5.model.AppUser;
+import idatt2105.oving5.model.User;
 import idatt2105.oving5.model.Expression;
-import idatt2105.oving5.repository.AppUserRepository;
+import idatt2105.oving5.repository.UserRepository;
 import idatt2105.oving5.repository.ExpressionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
@@ -13,11 +13,11 @@ import java.util.List;
 public class ExpressionService {
 
     private final ExpressionRepository expressionRepository;
-    private final AppUserRepository appUserRepository;
+    private final UserRepository appUserRepository;
 
-    public ExpressionService(ExpressionRepository expressionRepository, AppUserRepository appUserRepository) {
+    public ExpressionService(ExpressionRepository expressionRepository, UserRepository userRepository) {
         this.expressionRepository = expressionRepository;
-        this.appUserRepository = appUserRepository;
+        this.appUserRepository = userRepository;
     }
 
     public List<Expression> findAllExpressions() {
@@ -34,7 +34,7 @@ public class ExpressionService {
 
     public Expression assignAppUserToExpression(Integer expressionId, Integer appUserId) {
         Expression expression = expressionRepository.findById(expressionId).get();
-        AppUser appUser = appUserRepository.findById(appUserId).get();
+        User appUser = appUserRepository.findById(appUserId).get();
         expression.assignAppUser(appUser);
         return expressionRepository.save(expression);
     }
