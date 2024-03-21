@@ -36,13 +36,14 @@
 
 <script setup>
 import { computed, reactive, ref } from "vue";
-import { email, helpers, minLength, required } from "@vuelidate/validators";
+import { helpers, minLength, required } from "@vuelidate/validators";
 import { useUserStore } from "@/store/userStore.js";
 import BaseInput from "@/components/BaseInput.vue";
 import useVuelidate from "@vuelidate/core";
 import userApiClient from "@/services/UserService.js";
+import router from "@/router/index.js";
 
-// const userStore = useUserStore();
+const userStore = useUserStore();
 
 const newUser = reactive({
     username: "",
@@ -67,20 +68,22 @@ const v$ = useVuelidate(rules, newUser);
 async function submitRegister() {
     const result = await v$.value.$validate();
     if (result) {
-        const response = await userApiClient.postUser(newUser);
+        const response = await userApiClient.registerUser(newUser);
         if (response.success) {
-            // await userStore.saveUserInStore(
-            //         newUser.username,
-            //         newUser.password
-            // );
+            await userStore.saveUserInStore(
+                    newUser.username,
+                    newUser.password
+            );
             v$.value.$reset();
             resetInputFields();
-            setResponseMessage("Form submitted successfully!");
-        } else {
-            setResponseMessage(
-                    "An error occurred. Please try again later.\nError details:\n" +
-                    response.message
-            );
+            setResponseMessage("Successfully registered!");
+            await router.push("/login")
+        }
+        else if (response.success === false) {
+            setResponseMessage(response.message);
+        }
+        else {
+            setResponseMessage("An error occurred. Please try again later.\nError details:\n" + response.message);
         }
     }
 }
