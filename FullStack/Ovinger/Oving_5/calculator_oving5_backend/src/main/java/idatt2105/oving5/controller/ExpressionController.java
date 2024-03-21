@@ -1,15 +1,18 @@
 package idatt2105.oving5.controller;
 
+import idatt2105.oving5.dto.CalculationResponseDTO;
+import idatt2105.oving5.dto.ExpressionsResponseDTO;
 import idatt2105.oving5.model.User;
 import idatt2105.oving5.model.Expression;
 import idatt2105.oving5.services.UserService;
 import idatt2105.oving5.services.ExpressionService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/expressions")
+@RequestMapping("/api/expression")
 @CrossOrigin(origins = "http://localhost:5173")
 public class ExpressionController {
 
@@ -31,14 +34,14 @@ public class ExpressionController {
         expressionService.addExpression(expression);
     }
 
-    @GetMapping("/user")
-    public List<Expression> getExpressions(@RequestBody User appUser) {
-        Integer appUserId = appUserService.findAppUserByUsername(appUser.getUsername()).getId();
-        return expressionService.findAllExpressionsByAppUserId(appUserId);
-    }
+    @PostMapping("/user")
+    public ExpressionsResponseDTO getExpressions(@RequestBody User appUser) {
+        User foundUser = appUserService.findAppUserByUsername(appUser.getUsername());
+        if (foundUser == null) {
+            throw new UsernameNotFoundException("User not found");
+        }
 
-    @PutMapping("/{expressionId}/appuser/{appUserId}")
-    public Expression assignAppUserToExpression(@PathVariable Integer expressionId, @PathVariable Integer appUserId) {
-        return expressionService.assignAppUserToExpression(expressionId, appUserId);
+        List<CalculationResponseDTO> expressionList = expressionService.findAllExpressionsByAppUserId(foundUser.getId());
+        return new ExpressionsResponseDTO(expressionList);
     }
 }
