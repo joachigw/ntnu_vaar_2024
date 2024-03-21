@@ -6,8 +6,8 @@ public class Calculator {
 
     public double calculate(Expression expression) {
 
-        double firstNumber = Double.parseDouble(expression.getFirstNumber());
-        double secondNumber = Double.parseDouble(expression.getSecondNumber());
+        double firstNumber = expression.getFirstNumber();
+        double secondNumber = expression.getSecondNumber();
         String operator = expression.getOperator();
 
         return switch (operator) {
