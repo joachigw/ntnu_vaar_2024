@@ -137,7 +137,7 @@ onBeforeMount(() => {
 .contact-form {
     display: flex;
     flex-flow: column;
-    padding: 30px;
+    padding: 10px;
 }
 
 #submit-btn {
