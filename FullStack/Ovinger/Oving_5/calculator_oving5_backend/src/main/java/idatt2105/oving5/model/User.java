@@ -1,6 +1,5 @@
 package idatt2105.oving5.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -32,10 +31,6 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "appUser")
-    private Set<Expression> expressions;
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "app_user_role",
             joinColumns = {@JoinColumn(name = "app_user_id")},
@@ -45,7 +40,6 @@ public class User implements UserDetails {
 
     public User() {
         this.authorities = new HashSet<>();
-        this.expressions = new HashSet<>();
     }
 
     public User(String username, String password, Set<Role> authorities) {
@@ -75,14 +69,6 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Set<Expression> getExpressions() {
-        return expressions;
-    }
-
-    public void setExpressions(Set<Expression> expressions) {
-        this.expressions = expressions;
     }
 
 
@@ -133,7 +119,6 @@ public class User implements UserDetails {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", expressions=" + expressions +
                 ", authorities=" + authorities.toString() +
                 '}';
     }
