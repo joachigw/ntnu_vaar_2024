@@ -1,5 +1,6 @@
 package idatt2105.oving5.services;
 
+import idatt2105.oving5.dto.CalculationResponseDTO;
 import idatt2105.oving5.model.User;
 import idatt2105.oving5.model.Expression;
 import idatt2105.oving5.repository.UserRepository;
@@ -24,18 +25,29 @@ public class ExpressionService {
         return expressionRepository.findAll();
     }
 
-    public List<Expression> findAllExpressionsByAppUserId(Integer appUserId) {
-        return expressionRepository.findByAppUserId(appUserId);
+    public List<CalculationResponseDTO> findAllExpressionsByAppUserId(Integer appUserId) {
+        return expressionRepository.findByAppUserId(appUserId)
+                        .stream()
+                                .map(record -> {
+                                    Expression expression = new Expression();
+                                    expression.setId((Integer) record[0]);
+                                    expression.setFirstNumber((Double) record[1]);
+                                    expression.setSecondNumber((Double) record[2]);
+                                    expression.setOperator((String) record[3]);
+                                    expression.setResult((Double) record[4]);
+                                    return new CalculationResponseDTO(expression);
+                                })
+                        .toList();
     }
 
     public void addExpression(@RequestBody Expression expression) {
         expressionRepository.save(expression);
     }
 
-    public Expression assignAppUserToExpression(Integer expressionId, Integer appUserId) {
-        Expression expression = expressionRepository.findById(expressionId).get();
-        User appUser = appUserRepository.findById(appUserId).get();
+    public void assignAppUserToExpression(Expression expression, User user) {
+        Expression expressionDB = expressionRepository.findById(expression.getId()).get();
+        User appUser = appUserRepository.findByUsername(user.getUsername()).get();
         expression.assignAppUser(appUser);
-        return expressionRepository.save(expression);
+        expressionRepository.save(expressionDB);
     }
 }
