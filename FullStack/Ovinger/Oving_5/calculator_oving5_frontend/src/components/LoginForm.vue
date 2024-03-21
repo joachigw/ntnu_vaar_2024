@@ -6,6 +6,12 @@
             label="Username"
             class="field"
         />
+        <span
+                v-for="error in v$.username.$errors"
+                :key="error.$uid"
+                class="field-error"
+        >{{ error.$message }}
+        </span>
 
         <BaseInput
             id="password"
@@ -14,20 +20,30 @@
             class="field"
             type="password"
         />
+        <span
+                v-for="error in v$.password.$errors"
+                :key="error.$uid"
+                class="field-error"
+        >{{ error.$message }}
+        </span>
 
         <button id="submit-btn" type="submit" :disabled="hasErrors">Log in</button>
     </form>
+
+    <span id="response-message" v-if="responseMessage">{{ responseMessage }}</span>
+
 <!--    <h3>Forgot password</h3>-->
 <!--    <h3>Register new user</h3>-->
 </template>
 
 <script setup>
 import { computed, reactive, ref } from "vue";
-import { email, helpers, minLength, required } from "@vuelidate/validators";
+import { helpers, minLength, required } from "@vuelidate/validators";
 import { useUserStore } from "@/store/userStore.js";
 import BaseInput from "@/components/BaseInput.vue";
 import useVuelidate from "@vuelidate/core";
-import customerApiClient from "@/services/CustomerService.js";
+import userApiClient from "@/services/UserService.js";
+import router from "@/router/index.js";
 
 const userStore = useUserStore();
 
@@ -38,15 +54,11 @@ const user = reactive({
 
 const rules = computed(() => {
     return {
-        name: {
+        username: {
             required: helpers.withMessage("This field is required.", required),
-            minLength: minLength(2),
+            minLength: minLength(5),
         },
-        email: {
-            required: helpers.withMessage("This field is required.", required),
-            email: helpers.withMessage("Please enter a valid email address.", email),
-        },
-        message: {
+        password: {
             required: helpers.withMessage("This field is required.", required),
             minLength: minLength(5),
         },
@@ -58,20 +70,19 @@ const v$ = useVuelidate(rules, user);
 async function submitLogin() {
     const result = await v$.value.$validate();
     if (result) {
-        const response = await customerApiClient.postCustomer(user);
+        const response = await userApiClient.loginUser(user);
         if (response.success) {
-            await userStore.saveUserInStore(
-                    user.username,
-                    user.password
-            );
+            await userStore.saveUserInStore(response.data);
             v$.value.$reset();
             resetInputFields();
-            setResponseMessage("Form submitted successfully!");
-        } else {
-            setResponseMessage(
-                    "An error occurred. Please try again later.\nError details:\n" +
-                    response.message
-            );
+            setResponseMessage("Successfully logged in!");
+            await router.push("/");
+        }
+        else if (response.success === false) {
+            setResponseMessage(response.message);
+        }
+        else {
+            setResponseMessage("An error occurred. Please try again later.\nError details:\n" + response.message);
         }
     }
 }
@@ -89,6 +100,8 @@ function resetInputFields() {
     user.username = "";
     user.password = "";
 }
+
+
 </script>
 
 <style scoped>
@@ -117,5 +130,15 @@ function resetInputFields() {
 
 #submit-btn:disabled {
     background-color: gray;
+}
+
+.field-error {
+    color: red;
+    font-size: 1.25rem;
+}
+
+#response-message {
+    color: green;
+    font-size: 1.25rem;
 }
 </style>
