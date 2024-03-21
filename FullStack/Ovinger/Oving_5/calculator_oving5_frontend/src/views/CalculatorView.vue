@@ -1,12 +1,14 @@
 <template>
+    <span v-if="userStore.user.username">Logged in as: {{ userStore.user.username }}</span>
+    <button v-if="userStore.user.username" @click="logOut">Log out</button>
     <div class="app-wrapper">
         <div class="calculator-wrapper">
             <CalculatorDisplay id="display" :displayValue="displayValue" />
             <CalculatorNumpad @numpadClick="handleNumpadBtnClicked" />
         </div>
         <CalculatorLog
-            :log="results"
-            @clearLogClick="handleClearLogBtnClicked"
+                :log="results"
+                @clearLogClick="handleClearLogBtnClicked"
         />
     </div>
 </template>
@@ -16,7 +18,11 @@ import CalculatorDisplay from "../components/CalculatorDisplay.vue";
 import CalculatorLog from "../components/CalculatorLog.vue";
 import CalculatorNumpad from "../components/CalculatorNumpad.vue";
 import calculatorApiClient from "../services/CalculatorService.js";
-import { ref, onMounted } from "vue";
+import { useUserStore } from "@/store/userStore.js";
+import {ref, onBeforeMount, reactive} from "vue";
+import userApiClient from "@/services/UserService.js";
+
+const userStore = useUserStore();
 
 let previous = 0;
 let current = 0;
@@ -28,6 +34,7 @@ let sumPressed = false;
 let hasComma = false;
 let result = 0;
 let results = ref([]);
+
 
 function setPrevious(value) {
     previous = operatorFunction(parseFloat(current), parseFloat(previous));
@@ -142,8 +149,8 @@ function del() {
     if (displayValue.value.length > 1) {
         current = `${current}`.substring(0, current.length - 1);
         displayValue.value = `${displayValue.value}`.substring(
-            0,
-            displayValue.value.length - 1
+                0,
+                displayValue.value.length - 1
         );
     } else if (displayValue.value.length === 1) {
         current = 0;
@@ -152,30 +159,60 @@ function del() {
 }
 
 async function sum() {
-    // if ((previous === 0 || current === 0 || current === "0") && operator === "/") {
-    //     alert("You cannot divide with 0! Resetting... (operator: " + operator + ")");
-    //     allClear();
-    //     return;
-    // }
+
+    // Process common syntax errors eagerly
+    if ((previous === 0 || current === 0 || current === "0") && operator === "/") {
+        alert("You cannot divide with 0! Resetting...");
+        allClear();
+        return;
+    }
     if (displayValue.value === "0") {
         alert("You must enter a valid expression.");
         return;
     }
+    if (operator === null) {
+        alert("You must select an operator before calculating.");
+        return;
+    }
 
-    // Process expression with Java-backend
+    // Process expression with REST Spring Boot
     const expression = {
         firstNumber: previous,
         secondNumber: current,
-        operator: operator,
+        operator: operator
     };
 
-    const expressionPost = await calculatorApiClient.postExpression(expression);
-    result = expressionPost.result;
-    displayValue.value = String(result);
+    const expressionPost = await calculatorApiClient.postExpression(expression, userStore.user);
+    const firstNumber = expressionPost.data.firstNumber;
+    const secondNumber = expressionPost.data.secondNumber;
+    const eOperator = expressionPost.data.operator;
+    const eResult = expressionPost.data.result;
+
+    if (eResult !== "") displayValue.value = String(result);
+    else displayValue.value = "0";
 
     sumPressed = true;
-    results.value.push(`${previous} ${operator} ${current} = ${result}`);
+    results.value =[...results.value, `${firstNumber} ${eOperator} ${secondNumber} = ${eResult}`];
 }
+
+function logOut() {
+    userStore.logOut();
+    results.value = [];
+}
+
+// Fetch stored user if any and expressions if any
+onBeforeMount(async () => {
+    if (userStore.user && userStore.user.username !== null) {
+        const response = await userApiClient.fetchExpressions(userStore.user);
+        if (response.data !== undefined && (response.data.length > 0)) {
+            for (let i = 0; i < response.data.length; ++i) {
+                const expression = response.data[i];
+                const logItem = `${expression.firstNumber} ${expression.operator} ${expression.secondNumber} = ${expression.result}`;
+                results.value = [...results.value, logItem];
+            }
+        }
+    }
+});
 </script>
 
 <style scoped>
@@ -200,5 +237,9 @@ async function sum() {
     display: flex;
     flex-flow: column;
     width: 400px;
+}
+
+button {
+    color: black;
 }
 </style>
