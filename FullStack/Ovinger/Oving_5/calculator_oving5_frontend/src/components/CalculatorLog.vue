@@ -80,7 +80,7 @@ hr {
 #log-list {
     display: flex;
     flex-flow: column nowrap;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     list-style-type: none;
     max-height: 465px;
     overflow-x: hidden;
