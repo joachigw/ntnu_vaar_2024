@@ -37,4 +37,17 @@ public class TokenService {
 
         return jwtEncoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();
     }
+
+    public void verifyToken(String token) {
+        try {
+            jwtDecoder.decode(token);
+        } catch (JwtException e) {
+            throw new IllegalArgumentException("Invalid token, could not decode. Message:", e);
+        }
+    }
+
+    public String getUsernameFromToken(String token) {
+        Jwt jwt = jwtDecoder.decode(token);
+        return jwt.getSubject();
+    }
 }

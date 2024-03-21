@@ -1,6 +1,7 @@
 package idatt2105.oving5.services;
 
 import idatt2105.oving5.dto.LoginResponseDTO;
+import idatt2105.oving5.exceptions.UserNotFoundException;
 import idatt2105.oving5.model.Role;
 import idatt2105.oving5.model.User;
 import idatt2105.oving5.repository.RoleRepository;
@@ -10,6 +11,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -26,15 +29,17 @@ public class AuthenticationService {
     private final PasswordEncoder encoder;
     private final AuthenticationManager authManager;
     private final TokenService tokenService;
+    private final UserService userService;
 
     public AuthenticationService(UserRepository userRepository, RoleRepository roleRepository,
                                  PasswordEncoder encoder, AuthenticationManager authManager,
-                                 TokenService tokenService) {
+                                 TokenService tokenService, UserService userService) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.encoder = encoder;
         this.authManager = authManager;
         this.tokenService = tokenService;
+        this.userService = userService;
     }
 
     public User registerUser(String username, String password) {
@@ -52,18 +57,30 @@ public class AuthenticationService {
         try {
             Authentication auth = authManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
             String token = tokenService.generateJwt(auth);
+            System.out.println("first token: " + token);
 
             Optional<User> optionalUser = userRepository.findByUsername(username);
 
             if (optionalUser.isPresent()) {
                 return new LoginResponseDTO(optionalUser.get(), token);
+            } else {
+                throw new UsernameNotFoundException("User not found.");
             }
 
         } catch (AuthenticationException e) {
-            // TODO: Return proper exception
-            return new LoginResponseDTO(null, "");
+            throw new UserNotFoundException("Invalid username or password.");
         }
+    }
 
-        return null;
+    public String refreshJWT(String existingToken) {
+        tokenService.verifyToken(existingToken);
+
+        String username = tokenService.getUsernameFromToken(existingToken);
+
+        UserDetails userDetails = userService.loadUserByUsername(username);
+
+        Authentication auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+
+        return tokenService.generateJwt(auth);
     }
 }
