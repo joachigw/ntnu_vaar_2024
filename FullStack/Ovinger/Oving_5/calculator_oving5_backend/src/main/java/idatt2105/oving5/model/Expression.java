@@ -1,5 +1,6 @@
 package idatt2105.oving5.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,14 +20,18 @@ public class Expression {
     private Integer id;
 
     @Column(nullable = false)
-    private String firstNumber;
+    private Double firstNumber;
 
     @Column(nullable = false)
-    private String secondNumber;
+    private Double secondNumber;
 
     @Column(nullable = false)
     private String operator;
 
+    @Column(nullable = false)
+    private Double result;
+
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "app_user_id", referencedColumnName = "app_user_id")
     private User appUser;
@@ -40,19 +45,19 @@ public class Expression {
         this.id = id;
     }
 
-    public String getFirstNumber() {
+    public Double getFirstNumber() {
         return firstNumber;
     }
 
-    public void setFirstNumber(String firstNumber) {
+    public void setFirstNumber(Double firstNumber) {
         this.firstNumber = firstNumber;
     }
 
-    public String getSecondNumber() {
+    public Double getSecondNumber() {
         return secondNumber;
     }
 
-    public void setSecondNumber(String secondNumber) {
+    public void setSecondNumber(Double secondNumber) {
         this.secondNumber = secondNumber;
     }
 
@@ -62,6 +67,14 @@ public class Expression {
 
     public void setOperator(String operator) {
         this.operator = operator;
+    }
+
+    public Double getResult() {
+        return result;
+    }
+
+    public void setResult(Double result) {
+        this.result = result;
     }
 
     public User getAppUser() {
