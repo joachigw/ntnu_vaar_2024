@@ -10,19 +10,22 @@ const calculatorApiClient = axios.create({
 });
 
 export default {
-    async postExpression(expression) {
+    async postExpression(expression, user) {
+        const data = {
+            expression: expression,
+            user: user
+        }
         try {
             const response = await calculatorApiClient.post(
                 "/api/calculator/calculate",
-                expression
+                data
             );
 
             if (response.status === 200) {
                 const data = response.data;
 
                 if (data && typeof data.result !== "undefined") {
-                    const result = data.result;
-                    return { success: true, result };
+                    return { success: true, data };
                 } else {
                     return {
                         success: false,
@@ -37,7 +40,6 @@ export default {
                 };
             }
         } catch (error) {
-            console.error("Error: " + error);
             const result = error.response.data;
             return { success: false, result };
         }
